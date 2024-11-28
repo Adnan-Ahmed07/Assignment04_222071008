@@ -71,7 +71,6 @@ public class FXMLDocumentController implements Initializable {
           FXMLLoader loader = new FXMLLoader(getClass().getResource("show_profile.fxml"));
         Parent userView = loader.load();
         Show_profileController pf = loader.getController();
-//        public void setAll(String n, String d, String g, String e, String c)
         DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(java.time.format.FormatStyle.SHORT)
                                                        .withLocale(Locale.getDefault());
         pf.setAll(name.getText(),date.getValue().format(formatter),gg,email.getText(),city.getText());
